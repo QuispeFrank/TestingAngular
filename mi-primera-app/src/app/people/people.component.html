@@ -5,6 +5,10 @@
       <button class="btn btn-primary" (click)="addPerson()">Add a person</button>
       <p>{{message}}</p>
       <app-person></app-person>
+
+      <label>Person degree</label>
+      <input class="form-control" type="text" (input)="changeTitle($event)">
+      {{ title }}
     </div>
   </div>
 </div>
