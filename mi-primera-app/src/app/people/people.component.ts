@@ -8,11 +8,11 @@ import { Component } from "@angular/core";
 })
 export class PeopleComponent {
     disabled = false;
-    message = "haven't added a person yet";
-    title = 'no title';
+    message = '';
+    show = false;
 
     addPerson() {
-        this.message = 'person added :D'
+        this.show = true
     }
 
 }

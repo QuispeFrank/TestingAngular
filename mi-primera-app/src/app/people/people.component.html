@@ -2,13 +2,20 @@
   <div class="row">
     <div class="col">
       <h2>list of people</h2>
-      <button class="btn btn-primary" (click)="addPerson()">Add a person</button>
-      <p>{{message}}</p>
-      <app-person></app-person>
+      <button class="btn btn-primary" (click)="addPerson()">
+        Add a person
+      </button>
 
+      <p *ngIf="show; else noPerson">person added with degree {{ message }}</p>
+      <ng-template #noPerson>
+        <p> push the button to add a person :)</p>
+      </ng-template>
+
+      <app-person *ngIf="show"></app-person>
+      
+      <br>
       <label>Person degree</label>
-      <input class="form-control" type="text" [(ngModel)]="title">
-      {{ title }}
+      <input class="form-control" type="text" [(ngModel)]="message" />
     </div>
   </div>
 </div>
