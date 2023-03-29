@@ -8,4 +8,9 @@ import { Component } from "@angular/core";
 })
 export class PeopleComponent {
     disabled = false;
+    message = "haven't added a person yet";
+
+    addPerson() {
+        this.message = 'person added :D'
+    }
 }
