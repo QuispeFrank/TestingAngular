@@ -2,3 +2,8 @@
     Name: {{ first_name }} {{ last_name }}
     age: {{ age }}
 </p>
+
+<div (keyup)="0">
+    <input #entrada type="text">
+    <p>El valor del input es: {{ entrada.value }}</p>
+</div>
