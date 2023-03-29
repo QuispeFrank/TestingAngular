@@ -7,7 +7,7 @@
       <app-person></app-person>
 
       <label>Person degree</label>
-      <input class="form-control" type="text" (input)="changeTitle($event)">
+      <input class="form-control" type="text" [(ngModel)]="title">
       {{ title }}
     </div>
   </div>

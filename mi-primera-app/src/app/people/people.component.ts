@@ -15,7 +15,4 @@ export class PeopleComponent {
         this.message = 'person added :D'
     }
 
-    changeTitle(event: Event) {
-       this.title = (<HTMLInputElement>event.target).value;
-    }
 }
