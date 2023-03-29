@@ -7,5 +7,5 @@ import { Component } from "@angular/core";
     styleUrls: ['./people.component.css']
 })
 export class PeopleComponent {
-
+    disabled = false;
 }
