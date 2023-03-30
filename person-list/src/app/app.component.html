@@ -34,12 +34,7 @@
   </form>
   <hr />
 </div>
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div *ngFor="let person of people; let idx = index">
-        {{ idx + 1 }}: {{ person.firstName }} {{ person.lastName }}
-      </div>
-    </div>
-  </div>
-</div>
+<app-person *ngFor="let personElement of people; let i = index"
+[person]="personElement"
+[idx]="i"
+></app-person>
