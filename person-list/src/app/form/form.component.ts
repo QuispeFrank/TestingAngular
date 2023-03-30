@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Person } from '../person.model';
 
 @Component({
@@ -9,11 +9,11 @@ import { Person } from '../person.model';
 export class FormComponent {
   @Output() personAdded = new EventEmitter<Person>();
 
-  nameInput: string
-  lastNameInput: string
+  @ViewChild('nameInput') nameInput: ElementRef;
+  @ViewChild('lastNameInput') lastNameInput: ElementRef;
 
-  addPerson(nombreInput: HTMLInputElement, apellidoInput: HTMLInputElement) {
-    let person = new Person(nombreInput.value, apellidoInput.value)
-    this.personAdded.emit(person)
+  addPerson() {
+    let person = new Person(this.nameInput.nativeElement.value, this.lastNameInput.nativeElement.value);
+    this.personAdded.emit(person);
   }
 }
