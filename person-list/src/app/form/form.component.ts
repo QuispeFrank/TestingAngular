@@ -12,8 +12,8 @@ export class FormComponent {
   nameInput: string
   lastNameInput: string
 
-  addPerson() {
-    let person = new Person(this.nameInput, this.lastNameInput)
+  addPerson(nombreInput: HTMLInputElement, apellidoInput: HTMLInputElement) {
+    let person = new Person(nombreInput.value, apellidoInput.value)
     this.personAdded.emit(person)
   }
 }
