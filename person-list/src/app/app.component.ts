@@ -13,10 +13,8 @@ export class AppComponent {
     new Person('Juan', 'Salinas'),
     new Person('Danny', 'Chavez'),
   ];
-  firstName: string = '';
-  lastName: string = '';
 
-  addPerson() {
-    this.people.push(new Person(this.firstName, this.lastName))
+  addPerson(person: Person) {
+    this.people.push(person)
   }
 }
