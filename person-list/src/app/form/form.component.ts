@@ -9,8 +9,10 @@ import { PeopleService } from '../people.service';
 })
 export class FormComponent {
 
-  @ViewChild('nameInput') nameInput: ElementRef;
-  @ViewChild('lastNameInput') lastNameInput: ElementRef;
+  nameInput:string
+  lastNameInput:string
+
+
 
   constructor(private peopleService: PeopleService) {
     this.peopleService.hi.subscribe(
@@ -19,7 +21,7 @@ export class FormComponent {
   }
 
   addPerson() {
-    let person = new Person(this.nameInput.nativeElement.value, this.lastNameInput.nativeElement.value);
+    let person = new Person(this.nameInput, this.lastNameInput);
     this.peopleService.addPerson(person)
   }
 }

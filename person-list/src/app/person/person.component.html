@@ -1,12 +1,4 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div>
-        {{ idx + 1 }}: {{ person.firstName }} {{ person.lastName }}
-        <button type="submit" class="btn btn-info" (click)="sayHi()">
-          goEvent
-        </button>
-      </div>
-    </div>
-  </div>
+<div class="item">
+  <input type="checkbox" (click)="sayHi()" />
+  <p>{{ idx + 1 }}: {{ person.firstName }} {{ person.lastName }}</p>
 </div>
