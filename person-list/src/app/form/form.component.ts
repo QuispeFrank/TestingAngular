@@ -12,7 +12,11 @@ export class FormComponent {
   @ViewChild('nameInput') nameInput: ElementRef;
   @ViewChild('lastNameInput') lastNameInput: ElementRef;
 
-  constructor(private peopleService: PeopleService) { }
+  constructor(private peopleService: PeopleService) {
+    this.peopleService.hi.subscribe(
+      (idx: number) => alert(`Index is: ${idx}`)
+    )
+  }
 
   addPerson() {
     let person = new Person(this.nameInput.nativeElement.value, this.lastNameInput.nativeElement.value);

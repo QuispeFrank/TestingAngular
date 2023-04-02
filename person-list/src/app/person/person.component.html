@@ -1,8 +1,11 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <div >
+      <div>
         {{ idx + 1 }}: {{ person.firstName }} {{ person.lastName }}
+        <button type="submit" class="btn btn-info" (click)="sayHi()">
+          goEvent
+        </button>
       </div>
     </div>
   </div>
