@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Person } from './person.model';
+import { PeopleService } from './people.service';
 
 @Component({
   selector: 'app-root',
@@ -8,13 +9,12 @@ import { Person } from './person.model';
 })
 export class AppComponent {
   title = 'people';
-  people: Person[] = [
-    new Person('Leslie', 'Paz'),
-    new Person('Juan', 'Salinas'),
-    new Person('Danny', 'Chavez'),
-  ];
+  people: Person[] = []
 
-  addPerson(person: Person) {
-    this.people.push(person)
+  constructor(private peopleService: PeopleService){}
+
+  ngOnInit() {
+    this.people = this.peopleService.people
   }
+
 }
