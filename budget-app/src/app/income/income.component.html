@@ -8,8 +8,8 @@
                   <div class="right limpiarEstilos">
                       <div class="elemento_valor">+ {{income.value}}</div>
                       <div class="elemento_eliminar">
-                          <button (click)="deleteRegistry(income)" class="elemento_eliminar--btn">
-                              <i class="ion-ios-close-outline"></i>
+                          <button class="elemento_eliminar--btn">
+                              <i (click)="deleteRegistry(income)" class="ion-ios-close-outline"></i>
                           </button>
                       </div>
                   </div>
