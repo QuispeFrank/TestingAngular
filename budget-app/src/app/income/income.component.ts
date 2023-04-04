@@ -16,4 +16,8 @@ export class IncomeComponent {
     this.incomes = this.incomeService.incomes
   }
 
+  deleteRegistry(income: Income) {
+    this.incomeService.delete(income)
+  }
+
 }
