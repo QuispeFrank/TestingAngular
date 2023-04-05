@@ -9,7 +9,7 @@
       <div class="presupuesto_ingreso limpiarEstilos">
           <div class="presupuesto_ingreso--texto">Ingresos</div>
           <div class="right">
-              <div class="presupuesto_ingreso--valor">+ {{incomeTotalAmount}}</div>
+              <div class="presupuesto_ingreso--valor">+ {{incomeTotalAmount| currency:'PEN ':'symbol':'1.2-2'}}</div>
               <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
           </div>
       </div>
@@ -17,8 +17,8 @@
       <div class="presupuesto_egreso limpiarEstilos">
           <div class="presupuesto_egreso--text">Egresos</div>
           <div class="right limpiarEstilos">
-              <div class="presupuesto_egreso--valor">- {{expenseTotalAmount}}</div>
-              <div class="presupuesto_egreso--porcentaje">{{porcentage}}%</div>
+              <div class="presupuesto_egreso--valor">- {{expenseTotalAmount| currency:'PEN ':'symbol':'1.2-2'}}</div>
+              <div class="presupuesto_egreso--porcentaje">{{porcentage | percent}}</div>
           </div>
       </div>
   </div>
