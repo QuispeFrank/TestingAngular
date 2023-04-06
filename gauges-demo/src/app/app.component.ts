@@ -14,11 +14,11 @@ export class AppComponent {
       renderTo: 'canvasId',
       width: 200,
       height: 200,
-      minValue: 0,
-      maxValue: 100,
-      majorTicks: ['0', '20', '40', '60', '80', '100'],
-      minorTicks: 10,
-      value: 50,
+      minValue: 100,
+      maxValue: 120,
+      majorTicks: ['100', '105', '110', '115', '120'],
+      minorTicks: 5,
+      value: 110,
       colorBarProgress: '#0f0',
     });
 
