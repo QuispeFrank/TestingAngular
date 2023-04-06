@@ -8,6 +8,7 @@ import { IncomeComponent } from './income/income.component';
 import { FormComponent } from './form/form.component';
 import { IncomeService } from './income/income.service';
 import { ExpenseService } from './expenses/expenses.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExpenseService } from './expenses/expenses.service';
     FormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [
     IncomeService,
