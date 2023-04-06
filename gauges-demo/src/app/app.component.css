@@ -1,0 +1,116 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+  width: 80vw;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.graphics {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.measurement {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.measurement h2 {
+  margin: 0;
+}
+
+.threshold {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.threshold h2 {
+  margin: 0;
+}
+
+.threshold input[name="g1"] {
+  background-color: red;
+}
+
+.threshold input[name="g2"] {
+  background-color: yellow;
+}
+
+.threshold input[name="g3"] {
+  background-color: green;
+}
+
+.threshold label {
+  margin-top: 10px;
+}
+
+.data {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.linesup,
+.lineinf {
+  display: flex;
+  align-items: center;
+}
+
+.linesup label:first-of-type {
+  margin-right: 20px;
+}
+
+.linesup label,
+.lineinf label {
+  margin-right: 10px;
+}
+
+.linesup input,
+.lineinf input {
+  width: 50px;
+}
+
+@media (max-width: 600px) {
+  .measurement,
+  .threshold {
+    width: 48%;
+  }
+
+  .linesup,
+  .lineinf {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .linesup input,
+  .lineinf input {
+    width: 100%;
+  }
+
+  .linesup label:first-of-type {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
