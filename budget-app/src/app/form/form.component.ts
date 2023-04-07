@@ -11,8 +11,8 @@ import { Expense } from '../expenses/expenses.model';
 })
 export class FormComponent {
   type: string = 'incomeOperation';
-  descriptionInput: string = '';
-  valueInput: number = 0;
+  descriptionInput: string;
+  valueInput: number;
 
   constructor(
     private incomeService: IncomeService,
