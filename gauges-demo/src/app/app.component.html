@@ -2,7 +2,6 @@
   <h1>Voltaje Level</h1>
 
   <div class="graphics">
-
     <div class="measurement">
       <h2>Measurement</h2>
       <canvas id="canvasId"></canvas>
@@ -11,37 +10,40 @@
     <div class="threshold">
       <h2>Threshold</h2>
       <label for="g1">120 and up</label>
-      <input name="g1" type="text" disabled="true"/>
+      <input name="g1" type="text" disabled="true" />
       <label for="g2">110 - 120</label>
-      <input name="g2" type="text" disabled="true"/>
+      <input name="g2" type="text" disabled="true" />
       <label for="g3">100 - 110</label>
-      <input name="g3" type="text" disabled="true"/>
+      <input name="g3" type="text" disabled="true" />
     </div>
-
   </div>
 
   <div class="data">
-
     <label>Amplitudes [V]</label>
     <div class="linesup">
-      <label for="A">A-B</label>
-      <input name="A" type="text" disabled="true"/>
-      <label for="B">B-C</label>
-      <input name="B" type="text" disabled="true"/>
-      <label for="C">C-A</label>
-      <input name="C" type="text" disabled="true"/>
-      <label for="Promedio">Avg</label>
-      <input name="Promedio" type="text" disabled="true"/>
+      <div class="A">
+        <label for="A">A-B</label>
+        <input name="A" type="text" disabled="true" />
+      </div>
+      <div class="B">
+        <label for="B">B-C</label>
+        <input name="B" type="text" disabled="true" />
+      </div>
+      <div class="C">
+        <label for="C">C-A</label>
+        <input name="C" type="text" disabled="true" />
+      </div>
+      <div class="promedio">
+        <label for="Promedio">Avg</label>
+        <input name="Promedio" type="text" disabled="true" />
+      </div>
     </div>
 
     <div class="lineinf">
       <label for="rated">Rated [V]</label>
-      <input name="rated" type="text" disabled="true"/>
+      <input name="rated" type="text" disabled="true" />
       <label for="value">Value [%]</label>
-      <input name="B" type="text" disabled="true"/>
+      <input name="B" type="text" disabled="true" />
     </div>
-
   </div>
-
 </div>
-

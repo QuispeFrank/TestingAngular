@@ -12,8 +12,8 @@ export class AppComponent {
   ngOnInit(): void {
     const gauge = new Gauge.LinearGauge({
       renderTo: 'canvasId',
-      width: 200,
-      height: 200,
+      width: 150,
+      height: 150,
       minValue: 100,
       maxValue: 120,
       majorTicks: ['100', '105', '110', '115', '120'],
