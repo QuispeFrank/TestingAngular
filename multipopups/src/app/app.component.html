@@ -1,0 +1,9 @@
+
+<h1>please work haha</h1>
+<button (click)="showPopupA()"> Mostrar Popup A</button>
+<button (click)="showPopupB()"> Mostrar Popup B</button>
+<button (click)="showPopupC()"> Mostrar Popup C</button>
+<app-apopup *ngIf="showpopupA" (close)="showpopupA=false"></app-apopup>
+<app-bpopup *ngIf="showpopupB" (close)="showpopupB=false"></app-bpopup>
+<app-cpopup *ngIf="showpopupC" (close)="showpopupC=false"></app-cpopup>
+<p>donde esta el popup?</p>
