@@ -1,4 +1,5 @@
 <!-- popup-a.component.html -->
-<div class="popup-container" data-popup-id="A" ngDraggable>
+<div class="popup-container" data-popup-id="A" ngDraggable (mousedown)="bringToFront()">
   <h1>Popup A</h1>
+  <p>Content for popup A</p>
 </div>

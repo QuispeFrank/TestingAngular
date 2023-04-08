@@ -1,0 +1,9 @@
+/* pop-a.component.css y pop-b.component.css */
+.popup-container {
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  background-color: white;
+  border: 1px solid black;
+  padding: 1rem;
+}
