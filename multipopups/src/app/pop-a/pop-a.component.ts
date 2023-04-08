@@ -23,7 +23,7 @@ export class PopAComponent {
 
   ngOnInit(): void {
     const gaugeA = new Gauge.LinearGauge({
-      renderTo: 'canvasIdC',
+      renderTo: 'canvasIdA',
       width: 150,
       height: 150,
       minValue: 100,

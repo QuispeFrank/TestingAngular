@@ -23,7 +23,7 @@ export class PopBComponent {
 
   ngOnInit(): void {
     const gaugeB = new Gauge.LinearGauge({
-      renderTo: 'canvasIdC',
+      renderTo: 'canvasIdB',
       width: 150,
       height: 150,
       minValue: 100,
