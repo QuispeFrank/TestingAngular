@@ -7,13 +7,17 @@ import { BpopupComponent } from './bpopup/bpopup.component';
 import { CpopupComponent } from './cpopup/cpopup.component';
 import { NgxDragResizeModule } from 'ngx-drag-resize';
 import { AngularDraggableModule } from 'ngx-draggable-resize';
+import { PopAComponent } from './pop-a/pop-a.component';
+import { PopBComponent } from './pop-b/pop-b.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ApopupComponent,
     BpopupComponent,
-    CpopupComponent
+    CpopupComponent,
+    PopAComponent,
+    PopBComponent
   ],
   imports: [
     BrowserModule,
