@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { DragDropModule } from '@angular/cdk/drag-drop';
+import { AngularDraggableModule } from 'ngx-draggable-resize';
 
 
 
@@ -15,7 +15,7 @@ import { PopupComponent } from './popup/popup.component';
   ],
   imports: [
     BrowserModule,
-    DragDropModule,
+    AngularDraggableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
