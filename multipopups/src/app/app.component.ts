@@ -32,15 +32,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   showPopupA = false;
   showPopupB = false;
-
-  bringToFront(popupId: string) {
-    const popups: NodeListOf<HTMLElement> = document.querySelectorAll('.popup-container');
-    popups.forEach((popup) => {
-      if (popup.getAttribute('data-popup-id') === popupId) {
-        popup.style.zIndex = '10';
-      } else {
-        popup.style.zIndex = '1';
-      }
-    });
-  }
 }

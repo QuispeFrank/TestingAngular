@@ -1,9 +1,185 @@
 /* pop-a.component.css y pop-b.component.css */
-.popup-container {
-  position: absolute;
-  width: 200px;
-  height: 150px;
-  background-color: white;
-  border: 1px solid black;
-  padding: 1rem;
+
+.container {
+  position: fixed;
+  top: 25%;
+  left: 25%;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* background-color: #f0f0f0; */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 1%;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  width: 60vw;
+  max-width: 360px;
+  margin: auto;
+  z-index: 1;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.graphics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  /* border: 2px solid #ddd; */
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 10px;
+  width: 95%;
+}
+
+.measurement,
+.threshold {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /**/
+  /* border: 1px solid #ddd; */
+  border: 1px solid #e9ecef;
+  background-color: #f8f9fa;
+  /**/
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 0.5%;
+}
+
+.measurement h2,
+.threshold h2 {
+  margin: 0;
+  border-radius: 10px;
+  padding: 10px;
+  /**/
+  background-color: #e9ecef;
+  border: 1px solid #e9ecef;
+  margin-bottom: 10px;
+  font-size: 110%;
+  /**/
+}
+
+/* .threshold {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 0.5%;
+} */
+
+/* .threshold h2 {
+  margin: 5px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 10px;
+} */
+
+input[type="text"] {
+  background-color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 90%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.threshold input[name="g1"] {
+  background-color: red;
+  height: 2px;
+  width: 80%;
+}
+
+.threshold input[name="g2"] {
+  background-color: yellow;
+  height: 2px;
+  width: 80%;
+}
+
+.threshold input[name="g3"] {
+  background-color: green;
+  height: 2px;
+  width: 80%;
+}
+
+.threshold label {
+  margin-top: 10px;
+}
+
+.data {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  flex-direction: column;
+  /* border: 1px solid #ddd; */
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 10px;
+  width: 95%;
+}
+
+.linesup,
+.lineinf {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2% 0px;
+}
+
+.linesup label,
+.lineinf label {
+  margin: 0% 10px;
+}
+
+.linesup input,
+.lineinf input {
+  width: 50px;
+}
+
+.A,
+.B,
+.C,
+.promedio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 1.2vw;
+  content: normal;
+}
+
+@media (max-width: 620px) {
+  .graphics {
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+  }
+
+  .measurement,
+  .threshold {
+    width: 48%;
+  }
+
+  .linesup,
+  .lineinf {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .linesup input,
+  .lineinf input {
+    width: 50%;
+  }
+
+  .data {
+    width: 70%;
+  }
 }
