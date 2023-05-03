@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Person } from './person.model';
-import { PeopleService } from './people.service';
+// import { Person } from './person.model';
+// import { PeopleService } from './people.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,12 @@ import { PeopleService } from './people.service';
 })
 export class AppComponent {
   title = 'people';
-  people: Person[] = []
+  // people: Person[] = []
 
-  constructor(private peopleService: PeopleService){}
+  // constructor(private peopleService: PeopleService){}
 
-  ngOnInit() {
-    this.people = this.peopleService.people
-  }
+  // ngOnInit() {
+  //   this.people = this.peopleService.people
+  // }
 
 }

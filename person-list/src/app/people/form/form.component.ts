@@ -1,6 +1,6 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
-import { Person } from '../person.model';
-import { PeopleService } from '../people.service';
+import { Person } from '../../person.model';
+import { PeopleService } from '../../people.service';
 
 @Component({
   selector: 'app-form',
