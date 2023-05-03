@@ -1,4 +1,9 @@
 <div class="item">
-  <input type="checkbox" (click)="sayHi()" />
-  <p>{{ idx + 1 }}: {{ person.firstName }} {{ person.lastName }}</p>
+  <ul>
+    <li>
+      <a [routerLink]="['/people',idx]">
+        {{person.firstName}} {{person.lastName}}
+      </a>
+    </li>
+  </ul>
 </div>

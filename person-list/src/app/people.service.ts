@@ -19,4 +19,15 @@ export class PeopleService {
     this.people.push(person)
     this.logginService.sendMessageToConsole(`person: ${person.firstName} ${person.lastName}`)
   }
+
+  findPerson(index: number) {
+    let person: Person = this.people[index];
+    return person;
+  }
+
+  updatePerson(index: number, personX: Person) {
+    let person: Person = this.people[index];
+    person.firstName = personX.firstName;
+    person.lastName = personX.lastName;
+  }
 }
