@@ -1,6 +1,7 @@
 import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { Person } from '../../person.model';
 import { PeopleService } from '../../people.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form',
@@ -14,14 +15,17 @@ export class FormComponent {
 
 
 
-  constructor(private peopleService: PeopleService) {
+  constructor(private peopleService: PeopleService,
+              private router: Router,
+              ) {
     this.peopleService.hi.subscribe(
       (idx: number) => alert(`Index is: ${idx}`)
     )
   }
 
-  addPerson() {
+  onSavePerson() {
     let person = new Person(this.nameInput, this.lastNameInput);
     this.peopleService.addPerson(person)
+    this.router.navigate(['people'])
   }
 }
