@@ -13,6 +13,7 @@ export class FormComponent {
   nameInput:string
   lastNameInput:string
   index: number;
+  modoEdicion: number;
 
 
 
@@ -27,7 +28,8 @@ export class FormComponent {
 
   ngOnInit() {
     this.index = this.route.snapshot.params['id'];
-    if (this.index) {
+    this.modoEdicion = +this.route.snapshot.queryParams['modoEdicion'];
+    if (this.modoEdicion != null && this.modoEdicion === 1) {
       let person: Person = this.peopleService.findPerson(this.index);
       this.nameInput = person.firstName;
       this.lastNameInput = person.lastName;
@@ -36,7 +38,7 @@ export class FormComponent {
 
   onSavePerson() {
     let personX = new Person(this.nameInput, this.lastNameInput);
-    if(this.index) {
+    if(this.modoEdicion != null && this.modoEdicion === 1) {
       this.peopleService.updatePerson(this.index, personX);
     } else {
       this.peopleService.addPerson(personX);
