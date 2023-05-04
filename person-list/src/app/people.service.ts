@@ -30,4 +30,8 @@ export class PeopleService {
     person.firstName = personX.firstName;
     person.lastName = personX.lastName;
   }
+
+  deletePerson(index: number) {
+    this.people.splice(index, 1);
+  }
 }

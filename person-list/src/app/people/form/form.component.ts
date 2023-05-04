@@ -43,4 +43,11 @@ export class FormComponent {
     }
     this.router.navigate(['people'])
   }
+
+  deletePerson() {
+    if(this.index != null) {
+      this.peopleService.deletePerson(this.index);
+    }
+    this.router.navigate(['people']);
+}
 }
