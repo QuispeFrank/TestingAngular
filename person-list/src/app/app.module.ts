@@ -9,13 +9,15 @@ import { LoggingService } from './LoggingService.service';
 import { PeopleService } from './people.service';
 import { PeopleComponent } from './people/people.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PersonComponent,
     FormComponent,
-    PeopleComponent
+    PeopleComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule, FormsModule, AppRoutingModule
